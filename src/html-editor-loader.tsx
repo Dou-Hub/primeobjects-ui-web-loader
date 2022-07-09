@@ -3,10 +3,10 @@ import dynamic from 'next/dynamic';
 import { isNil } from 'lodash';
 import { _window } from 'primeobjects-helper-util';
 import { CSS } from 'primeobjects-ui-web-basic/build/cjs/controls/css';
-import { HTML_EDITOR_PROPS_TYPE } from 'primeobjects-ui-web-html/build/cjs/html-editor-type';
+import { THtmlEditor } from 'primeobjects-ui-web-html/build/cjs/html-editor-type';
 import { HTML_EDITOR_CSS } from 'primeobjects-ui-web-html/build/cjs/html-css';
 
-export const HtmlEditorLoader = (props: HTML_EDITOR_PROPS_TYPE & { loadingContent?: string | JSX.Element }) => {
+export const HtmlEditorLoader = (props: THtmlEditor & { loadingContent?: string | JSX.Element }) => {
 
     const loadingContent: string | JSX.Element = !isNil(props.loadingContent) ? props.loadingContent : <p>...</p>;
     const className = props.className ? props.className : '';
